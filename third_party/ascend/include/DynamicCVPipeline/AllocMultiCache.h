@@ -39,6 +39,9 @@ public:
 
     // Run the pass
     void runOnOperation() override;
+
+    // Pass argument
+    llvm::StringRef getArgument() const override { return "alloc-multi-cache"; }
 };
 
 // Create the pass

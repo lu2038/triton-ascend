@@ -37,6 +37,9 @@ public:
   SeparateMemoryFromComputePass() = default;
 
   void runOnOperation() override;
+
+  // Pass argument
+  llvm::StringRef getArgument() const override { return "separate-memory-from-compute"; }
 };
 
 std::unique_ptr<OperationPass<ModuleOp>> createSeparateMemoryFromComputePass();

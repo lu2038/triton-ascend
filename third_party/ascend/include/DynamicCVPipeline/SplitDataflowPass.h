@@ -38,6 +38,9 @@ public:
 
     // Run the pass
     void runOnOperation() override;
+
+    // Pass argument
+    llvm::StringRef getArgument() const override { return "split-dataflow"; }
 };
 
 // Create the pass

@@ -52,6 +52,9 @@ public:
 
     void setConditionInfo(ControlFlowConditionInfo *info) { this->info = info; }
 
+    // Pass argument
+    llvm::StringRef getArgument() const override { return "update-condition-info"; }
+
 private:
     SmallVector<SmallVector<Value> > allocSSBuffer(ModuleOp module);
 

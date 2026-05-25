@@ -37,6 +37,9 @@ public:
   void runOnOperation() override;
   void setConditionInfo(ControlFlowConditionInfo *info) { this->info = info; }
 
+  // Pass argument
+  llvm::StringRef getArgument() const override { return "init-dependent-map"; }
+
 private:
   ControlFlowConditionInfo *info = nullptr;
 };
